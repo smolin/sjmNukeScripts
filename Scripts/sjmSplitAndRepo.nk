@@ -1,0 +1,140 @@
+set cut_paste_input [stack 0]
+version 6.3 v6
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x8e8e3800
+ label "split and repo"
+ note_font_size 42
+ selected true
+ xpos 661
+ ypos 645
+ bdwidth 308
+ bdheight 237
+}
+Roto {
+ inputs 0
+ curves {AnimTree: "" {
+ Version: 1.2
+ Flag: 0
+ RootNode: 1
+ Node: {
+  NodeName: "Root" {
+   Flag: 512
+   NodeType: 1
+   Transform: 0 0 S 0 0 S 0 0 S 0 0 S 0 1 S 0 1 S 0 0 S 0 1174 S 0 576 
+   NumOfAttributes: 11
+   "vis" S 0 1 "opc" S 0 1 "mbo" S 0 1 "mb" S 0 1 "mbs" S 0 0.5 "fo" S 0 1 "fx" S 0 0 "fy" S 0 0 "ff" S 0 1 "ft" S 0 0 "pt" S 0 0 
+  }
+  NumOfChildren: 1
+  Node: {
+   NodeName: "Bezier1" {
+    Flag: 512
+    NodeType: 3
+    CurveGroup: "" {
+     Transform: 0 0 S 1 36 0 S 1 36 0 S 1 36 0 S 1 36 1 S 1 36 1 S 1 36 0 S 1 36 533.5 S 1 36 505 
+     Flag: 0
+     NumOfCubicCurves: 2
+     CubicCurve: "" {
+      Type: 0 Flag: 8192 Dim: 2
+      NumOfPoints: 12
+      0 S 1 36 0 S 1 36 0 0 0 S 1 36 1051 S 1 36 1255 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 1241 S 1 36 -211 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 -130 S 1 36 -234 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 -188 S 1 36 1238 0 0 S 1 36 0 S 1 36 0 0 
+     }
+     CubicCurve: "" {
+      Type: 0 Flag: 8192 Dim: 2
+      NumOfPoints: 12
+      0 S 1 36 0 S 1 36 0 0 0 S 1 36 92 S 1 36 102 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 150.775 S 1 36 -126.191 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 0 S 1 36 0 S 1 36 0 0 
+     }
+     NumOfAttributes: 45
+     "vis" S 0 1 "r" S 0 1 "g" S 0 1 "b" S 0 1 "a" S 0 1 "ro" S 0 0 "go" S 0 0 "bo" S 0 0 "ao" S 0 0 "opc" S 0 1 "bm" S 0 0 "inv" S 0 0 "mbo" S 0 0 "mb" S 0 1 "mbs" S 0 0.5 "mbsot" S 0 0 "mbso" S 0 0 "fo" S 0 1 "fx" S 0 0 "fy" S 0 0 "ff" S 0 1 "ft" S 0 0 "src" S 0 0 "stx" S 0 0 "sty" S 0 0 "str" S 0 0 "sr" S 0 0 "ssx" S 0 1 "ssy" S 0 1 "ss" S 0 0 "spx" S 0 1174 "spy" S 0 576 "stot" S 0 0 "sto" S 0 0 "sv" S 0 0 "sf" S 0 1 "sb" S 0 1 "nv" S 0 2 "view1" S 0 1 "view2" S 0 2 "ltn" S 0 36 "ltm" S 0 36 "ltt" S 0 0 "tt" S 0 4 "pt" S 0 0 
+    }
+   }
+   NumOfChildren: 0
+  }
+ }
+}
+}
+ toolbox {selectAll {
+  { selectAll ssx 1 ssy 1 sf 1 }
+  { createBezier ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBSpline ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle ssx 1 ssy 1 sf 1 sb 1 }
+  { brush ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_lifetime_type all
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {320 240}
+ colorOverlay 0
+ lifetime_type "all frames"
+ lifetime_start 36
+ lifetime_end 36
+ view {}
+ motionblur_on true
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ createNewTrack {{-1} "-1\t(none)\t-1" "1000\tNew Track Layer\t1000"}
+ name Roto6
+ selected true
+ xpos 781
+ ypos 780
+}
+set Nd5f029c0 [stack 0]
+push $cut_paste_input
+Dot {
+ name Dot2
+ selected true
+ xpos 817
+ ypos 725
+}
+set Nf1c4430 [stack 0]
+Merge2 {
+ inputs 2
+ operation stencil
+ name Merge5
+ selected true
+ xpos 879
+ ypos 780
+}
+Transform {
+ translate {80 -142}
+ center {1562 750}
+ name Transform10
+ selected true
+ xpos 879
+ ypos 806
+}
+push $Nd5f029c0
+push $Nf1c4430
+Merge2 {
+ inputs 2
+ operation mask
+ name Merge4
+ selected true
+ xpos 671
+ ypos 780
+}
+Transform {
+ translate {-268 -134}
+ center {854 804}
+ name Transform8
+ selected true
+ xpos 671
+ ypos 806
+}
+Merge2 {
+ inputs 2
+ name Merge7
+ selected true
+ xpos 783
+ ypos 852
+}

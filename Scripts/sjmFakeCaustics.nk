@@ -1,0 +1,37 @@
+set cut_paste_input [stack 0]
+version 7.0 v5
+Constant {
+ inputs 0
+ channels rgb
+ format "512 512 0 0 512 512 1 square_512"
+ name Constant1
+ selected true
+ xpos -240
+ ypos -170
+}
+Noise {
+ type turbulence
+ size 90
+ zoffset 1.94
+ lacunarity 1.13
+ gain 0.57
+ gamma 1
+ center {960 540}
+ name Noise1
+ selected true
+ xpos -240
+ ypos -98
+}
+Invert {
+ name Invert1
+ selected true
+ xpos -240
+ ypos -74
+}
+Grade {
+ gamma 0.58
+ name Grade1
+ selected true
+ xpos -240
+ ypos -38
+}

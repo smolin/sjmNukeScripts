@@ -1,0 +1,83 @@
+set cut_paste_input [stack 0]
+version 6.3 v6
+BackdropNode {
+ inputs 0
+ name BackdropNode5
+ tile_color 0x7171c600
+ note_font_size 50
+ selected true
+ xpos 530
+ ypos 974
+ bdwidth 256
+ bdheight 244
+}
+NoOp {
+ inputs 0
+ name NoOp6
+ selected true
+ xpos 540
+ ypos 1054
+}
+Shuffle {
+ alpha black
+ name Shuffle11
+ selected true
+ xpos 540
+ ypos 1080
+}
+Blur {
+ size 50
+ name Blur9
+ label "size \[value size]"
+ selected true
+ xpos 540
+ ypos 1106
+}
+set Nd10b3f0 [stack 0]
+Add {
+ value 0.83
+ name Add2
+ selected true
+ xpos 540
+ ypos 1156
+}
+push $Nd10b3f0
+push $cut_paste_input
+NoOp {
+ name NoOp7
+ selected true
+ xpos 696
+ ypos 1084
+}
+Unpremult {
+ name Unpremult3
+ selected true
+ xpos 696
+ ypos 1110
+}
+Merge2 {
+ inputs 2
+ operation plus
+ mix 0.05
+ name Merge31
+ selected true
+ xpos 696
+ ypos 1136
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ Achannels {rgba.red rgba.green rgba.blue -rgba.alpha}
+ Bchannels {rgba.red rgba.green rgba.blue -rgba.alpha}
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ name Merge32
+ selected true
+ xpos 696
+ ypos 1162
+}
+Premult {
+ name Premult3
+ selected true
+ xpos 696
+ ypos 1188
+}

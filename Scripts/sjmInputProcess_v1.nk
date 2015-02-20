@@ -1,0 +1,41 @@
+set cut_paste_input [stack 0]
+version 7.0 v8
+push $cut_paste_input
+Group {
+name sjmInputProcess
+selected true
+xpos -1349
+ypos 2947
+addUserKnob {20 User}
+addUserKnob {6 useBlur +STARTLINE}
+useBlur true
+addUserKnob {6 useInvert +STARTLINE}
+useInvert true
+}
+Input {
+inputs 0
+name Input1
+xpos -516
+ypos 39
+}
+Blur {
+size 21
+filter box
+name Blur2
+label "size \[value size]"
+xpos -516
+ypos 86
+disable {{!parent.useBlur}}
+}
+Invert {
+name Invert1
+xpos -516
+ypos 160
+disable {{!parent.useInvert}}
+}
+Output {
+name Output1
+xpos -516
+ypos 233
+}
+end_group

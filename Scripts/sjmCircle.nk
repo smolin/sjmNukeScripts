@@ -1,0 +1,16 @@
+set cut_paste_input [stack 0]
+version 6.2 v4
+push $cut_paste_input
+Radial {
+ area {{"center.x - radius"} {"center.y - radius"} {"center.x + radius"} {"center.y + radius"}}
+ softness 0
+ name circle
+ selected true
+ xpos -626
+ ypos 1198
+ addUserKnob {20 User}
+ addUserKnob {12 center}
+ center {500 500}
+ addUserKnob {7 radius R 0 100}
+ radius 100
+}

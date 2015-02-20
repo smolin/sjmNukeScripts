@@ -1,0 +1,15 @@
+set cut_paste_input [stack 0]
+version 6.3 v6
+push $cut_paste_input
+FrameHold {
+ first_frame {{"holdbeforeframe * (frame<=holdbeforeframe) + frame * (frame>holdbeforeframe) * (frame < holdafterframe) + holdafterframe * (frame >= holdafterframe)"}}
+ name trimHandles
+ selected true
+ xpos 41
+ ypos 8
+ addUserKnob {20 User}
+ addUserKnob {3 holdbeforeframe}
+ holdbeforeframe 4
+ addUserKnob {3 holdafterframe}
+ holdafterframe 52
+}

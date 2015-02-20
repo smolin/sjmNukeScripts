@@ -1,0 +1,744 @@
+set cut_paste_input [stack 0]
+version 6.3 v3
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x8e8e3800
+ label sjmAllMerges
+ note_font_size 42
+ selected true
+ xpos 80
+ ypos -564
+ bdwidth 267
+ bdheight 217
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "shows all the merge operations as\na contact sheet to more easily find\nthe one you want. Try swapping inputs\ntoo since some operations aren't\nsymetric."
+ selected true
+ xpos 88
+ ypos -430
+}
+Constant {
+ inputs 0
+ channels alpha
+ color 1
+ name Constant1
+ selected true
+ xpos 90
+ ypos -504
+}
+push 0
+push $cut_paste_input
+Group {
+ inputs 3
+ name allMergeContact
+ selected true
+ xpos 239
+ ypos -475
+}
+ Input {
+  inputs 0
+  name InputMask
+  selected true
+  xpos 310
+  number 2
+ }
+set Ndb9c430 [stack 0]
+ Input {
+  inputs 0
+  name InputA
+  xpos 0
+ }
+set Nc000bd60 [stack 0]
+ Input {
+  inputs 0
+  name InputB
+  xpos 163
+  number 1
+ }
+set Nc000ef00 [stack 0]
+ Merge2 {
+  inputs 2+1
+  operation xor
+  name Merge32
+  xpos -38
+  ypos 578
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text32
+  xpos -38
+  ypos 606
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation under
+  name Merge31
+  xpos -175
+  ypos 583
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text31
+  xpos -175
+  ypos 611
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation stencil
+  name Merge30
+  xpos 377
+  ypos 511
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text30
+  xpos 377
+  ypos 539
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation soft-light
+  name Merge29
+  xpos 248
+  ypos 523
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text29
+  xpos 248
+  ypos 551
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation screen
+  name Merge28
+  xpos 125
+  ypos 517
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text28
+  xpos 125
+  ypos 545
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation plus
+  name Merge27
+  xpos 2
+  ypos 511
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text27
+  xpos 2
+  ypos 539
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation overlay
+  name Merge26
+  xpos -123
+  ypos 514
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text26
+  xpos -123
+  ypos 542
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  name Merge25
+  xpos 291
+  ypos 435
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text25
+  xpos 291
+  ypos 463
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation out
+  name Merge24
+  xpos 163
+  ypos 432
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text24
+  xpos 163
+  ypos 460
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation multiply
+  name Merge23
+  xpos 49
+  ypos 435
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text23
+  xpos 49
+  ypos 463
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation minus
+  name Merge22
+  xpos -66
+  ypos 432
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text22
+  xpos -66
+  ypos 460
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation min
+  name Merge21
+  xpos -191
+  ypos 439
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text21
+  xpos -191
+  ypos 467
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation max
+  name Merge20
+  xpos 357
+  ypos 367
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text20
+  xpos 357
+  ypos 395
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation matte
+  name Merge19
+  xpos 233
+  ypos 367
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text19
+  xpos 233
+  ypos 395
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation mask
+  name Merge18
+  xpos 115
+  ypos 367
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text18
+  xpos 115
+  ypos 395
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation in
+  name Merge17
+  xpos 0
+  ypos 367
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text17
+  xpos 0
+  ypos 395
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation hypot
+  name Merge16
+  xpos -135
+  ypos 367
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text16
+  xpos -135
+  ypos 395
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation hard-light
+  name Merge15
+  xpos 286
+  ypos 296
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text15
+  xpos 286
+  ypos 324
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation hypot
+  name Merge14
+  xpos 174
+  ypos 296
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text14
+  xpos 174
+  ypos 324
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation geometric
+  name Merge13
+  xpos 45
+  ypos 300
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text13
+  xpos 53
+  ypos 324
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation from
+  name Merge12
+  xpos -63
+  ypos 290
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text12
+  xpos -63
+  ypos 324
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation exclusion
+  name Merge11
+  xpos -191
+  ypos 296
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text11
+  xpos -191
+  ypos 324
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation divide
+  name Merge10
+  xpos 317
+  ypos 226
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text10
+  xpos 317
+  ypos 254
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation divide
+  name Merge9
+  xpos 206
+  ypos 226
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text9
+  xpos 206
+  ypos 254
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation disjoint-over
+  name Merge8
+  xpos 95
+  ypos 226
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text8
+  xpos 95
+  ypos 254
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation difference
+  name Merge7
+  xpos -21
+  ypos 226
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text7
+  xpos -21
+  ypos 254
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation copy
+  name Merge6
+  xpos -133
+  ypos 226
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text6
+  xpos -133
+  ypos 254
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation conjoint-over
+  name Merge5
+  xpos 260
+  ypos 172
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text5
+  xpos 260
+  ypos 200
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation color-dodge
+  name Merge4
+  xpos 163
+  ypos 172
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text4
+  xpos 163
+  ypos 200
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation color-burn
+  name Merge3
+  xpos 50
+  ypos 172
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text3
+  xpos 50
+  ypos 200
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation average
+  name Merge2
+  xpos -69
+  ypos 172
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text2
+  xpos -69
+  ypos 200
+ }
+push $Ndb9c430
+push $Nc000bd60
+push $Nc000ef00
+ Merge2 {
+  inputs 2+1
+  operation atop
+  name Merge1
+  xpos -188
+  ypos 172
+ }
+ Text {
+  message "\[python nuke.thisNode().input(0).knob('operation').value()]"
+  font /usr/share/fonts/bitstream-vera/Vera.ttf
+  yjustify center
+  box {587 288 1761 864}
+  center {1174 576}
+  color {1 0 0 1}
+  name Text1
+  xpos -188
+  ypos 200
+ }
+ ContactSheet {
+  inputs 32
+  rows 7
+  columns 5
+  roworder TopBottom
+  name ContactSheet1
+  xpos 136
+  ypos 721
+ }
+ Output {
+  name Output1
+  xpos 136
+  ypos 808
+ }
+end_group

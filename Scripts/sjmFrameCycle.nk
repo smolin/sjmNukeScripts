@@ -1,0 +1,17 @@
+set cut_paste_input [stack 0]
+version 6.2 v4
+push $cut_paste_input
+FrameHold {
+ first_frame {{"(frame -1) % (endFrame-startFrame) + startFrame"}}
+ name FrameCycle
+ help "Set startFrame, endFrame in User tab. Output will cycle frames in this range, with startFrame on output frame 1. By SJM."
+ label beauty
+ selected true
+ xpos 51
+ ypos -121
+ addUserKnob {20 User}
+ addUserKnob {3 startFrame}
+ startFrame 3
+ addUserKnob {3 endFrame}
+ endFrame 8
+}

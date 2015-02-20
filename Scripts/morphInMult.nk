@@ -1,0 +1,16 @@
+set cut_paste_input [stack 0]
+version 8.0 v6
+push $cut_paste_input
+Multiply {
+value {{frame<morphStart?0:frame==morphStart?0.01:frame<morphEnd?lerp(morphStart,0.01,morphEnd-1,.9,frame):1}}
+name MorphInMult
+label "morphIn: \[value morphStart] to \[value morphEnd]"
+selected true
+xpos -4956
+ypos -3819
+addUserKnob {20 User}
+addUserKnob {3 morphStart}
+morphStart 16
+addUserKnob {3 morphEnd}
+morphEnd 44
+}

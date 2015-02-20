@@ -1,0 +1,39 @@
+set cut_paste_input [stack 0]
+version 6.3 v6
+BackdropNode {
+ inputs 0
+ name sjmMatchGrade
+ tile_color 0x8e8e3800
+ note_font_size 42
+ selected true
+ xpos -159
+ ypos -349
+ bdwidth 309
+ bdheight 243
+}
+StickyNote {
+ inputs 0
+ name __doc__
+ label "set gain of GradeCurrent by sampling the\nimage to be adjusted. Set gain of GradeTarget\nby sampling the image to match. by Steve Molin."
+ selected true
+ xpos -136
+ ypos -171
+}
+push $cut_paste_input
+Grade {
+ white {0.05083427578 0.03367181495 0.01098729577 0.9971622229}
+ reverse true
+ name GradeCurrent
+ label "sample current"
+ selected true
+ xpos -73
+ ypos -268
+}
+Grade {
+ white {0.02978115901 0.01396112237 0.01194294263 0.0008437488577}
+ name GradeTarget
+ label "sample target"
+ selected true
+ xpos -73
+ ypos -213
+}

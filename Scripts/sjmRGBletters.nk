@@ -1,0 +1,61 @@
+set cut_paste_input [stack 0]
+version 6.3 v5
+push $cut_paste_input
+Text {
+ output {rgba.red -rgba.green -rgba.blue -rgba.alpha}
+ message R
+ font /usr/share/fonts/bitstream-vera/Vera.ttf
+ size 710
+ yjustify center
+ box {587 288 1761 864}
+ center {1174 576}
+ name Text1
+ selected true
+ xpos -356
+ ypos 788
+}
+Text {
+ output {-rgba.red rgba.green -rgba.blue -rgba.alpha}
+ message G
+ font /usr/share/fonts/bitstream-vera/Vera.ttf
+ size 710
+ yjustify center
+ box {587 288 1761 864}
+ center {1174 576}
+ name Text2
+ selected true
+ xpos -356
+ ypos 814
+}
+Text {
+ output {-rgba.red -rgba.green rgba.blue -rgba.alpha}
+ message B
+ font /usr/share/fonts/bitstream-vera/Vera.ttf
+ size 710
+ yjustify center
+ box {587 288 1761 864}
+ center {1174 576}
+ name Text3
+ selected true
+ xpos -356
+ ypos 852
+}
+Text {
+ output {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+ message A
+ font /usr/share/fonts/bitstream-vera/Vera.ttf
+ size 710
+ yjustify center
+ box {587 288 1761 864}
+ center {1174 576}
+ name Text4
+ selected true
+ xpos -356
+ ypos 890
+}
+Reformat {
+ name Reformat5
+ selected true
+ xpos -356
+ ypos 928
+}

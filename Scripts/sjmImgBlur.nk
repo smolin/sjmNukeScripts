@@ -1,0 +1,47 @@
+set cut_paste_input [stack 0]
+version 6.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0x8e8e3800
+ label "i-blur clone"
+ note_font_size 42
+ selected true
+ xpos -442
+ ypos -52
+ bdwidth 227
+ bdheight 311
+}
+push $cut_paste_input
+Ramp {
+ p0 {456 584}
+ p1 {2002 604}
+ name Ramp1
+ selected true
+ xpos -432
+ ypos 148
+}
+CheckerBoard2 {
+ inputs 0
+ name CheckerBoard2
+ selected true
+ xpos -305
+ ypos 28
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 depth.Z
+ name Copy2
+ selected true
+ xpos -305
+ ypos 142
+}
+ZBlur {
+ math linear
+ size 11
+ name ZBlur1
+ selected true
+ xpos -305
+ ypos 217
+}

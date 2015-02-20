@@ -1,0 +1,35 @@
+set cut_paste_input [stack 0]
+version 6.1 v3
+push $cut_paste_input
+Group {
+ name gainedGamma
+ selected true
+ xpos 99
+ ypos 19
+ addUserKnob {20 User}
+ addUserKnob {7 gamma R 0 4}
+ gamma 0.5
+ addUserKnob {7 offset t "generally between -1 and 0" R -1 0}
+ offset -0.4
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 156
+  ypos -8
+ }
+ Grade {
+  multiply {{"1 / gamma.L" i}}
+  add {{parent.offset i}}
+  gamma {{parent.gamma i}}
+  name Grade1
+  selected true
+  xpos 156
+  ypos 63
+ }
+ Output {
+  name Output1
+  xpos 156
+  ypos 132
+ }
+end_group

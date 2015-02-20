@@ -1,0 +1,60 @@
+set cut_paste_input [stack 0]
+version 6.3 v6
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x7171c600
+ note_font_size 42
+ selected true
+ xpos 168
+ ypos -208
+ bdwidth 187
+ bdheight 275
+}
+push $cut_paste_input
+Dot {
+ name Dot1
+ selected true
+ xpos 299
+ ypos -137
+}
+set N128fab90 [stack 0]
+Tracker3 {
+ track1 {{curve x1 922} {curve x1 676}}
+ offset1 {0 0}
+ pattern1 {-32 -32 32 32}
+ search1 {-22 -22 22 22}
+ track2 {1126 676}
+ offset2 {0 0}
+ pattern2 {-32 -32 32 32}
+ search2 {-22 -22 22 22}
+ track3 {1126 880}
+ offset3 {0 0}
+ pattern3 {-32 -32 32 32}
+ search3 {-22 -22 22 22}
+ track4 {922 880}
+ offset4 {0 0}
+ pattern4 {-32 -32 32 32}
+ search4 {-22 -22 22 22}
+ translate {{curve x1 0} {curve x1 0}}
+ center {{curve x1 922} {curve x1 676}}
+ name Tracker1
+ selected true
+ xpos 178
+ ypos -73
+}
+push $N128fab90
+MotionBlur2D {
+ inputs 2
+ name MotionBlur2D1
+ selected true
+ xpos 265
+ ypos -23
+}
+VectorBlur {
+ uv motion
+ name VectorBlur1
+ selected true
+ xpos 265
+ ypos 27
+}

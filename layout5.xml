@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="1951" y="208" w="1889" h="872" screen="1">
+        <splitter orientation="1">
+            <split size="1184"/>
+            <splitter orientation="1">
+                <split size="46"/>
+                <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                    <page id="Toolbar.1"/>
+                </dock>
+                <split size="1134"/>
+                <splitter orientation="2">
+                    <split size="473"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                        <page id="Script Editor.1"/>
+                    </dock>
+                    <split size="334"/>
+                    <dock id="" activePageId="DAG.1">
+                        <page id="DAG.1"/>
+                        <page id="Curve Editor.1"/>
+                        <page id="DopeSheet.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="685"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>

@@ -1,0 +1,19 @@
+set cut_paste_input [stack 0]
+version 8.0 v6
+push $cut_paste_input
+AdjBBox {
+name AdjBBox1
+selected true
+xpos -7666
+ypos -2914
+}
+VectorBlur {
+uv motion
+constant {-0.5 -0.5}
+method forward
+alpha rgba.alpha
+name VectorBlur4
+selected true
+xpos -7666
+ypos -2890
+}

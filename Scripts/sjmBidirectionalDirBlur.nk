@@ -1,0 +1,26 @@
+set cut_paste_input [stack 0]
+version 6.2 v4
+push $cut_paste_input
+DirBlurWrapper {
+ channels rgba
+ BlurType linear
+ BlurLayer rgba
+ BlurLength 15
+ BlurAngle {{curve x54 70}}
+ name DirBlurWrapper3
+ selected true
+ xpos -800
+ ypos 1912
+}
+DirBlurWrapper {
+ channels rgba
+ BlurType linear
+ BlurLayer rgba
+ BlurLength {{parent.DirBlurWrapper3.BlurLength.L}}
+ BlurAngle {{"parent.DirBlurWrapper3.BlurAngle.L + 180"}}
+ Samples 86
+ name DirBlurWrapper4
+ selected true
+ xpos -800
+ ypos 1940
+}

@@ -1,0 +1,10 @@
+set cut_paste_input [stack 0]
+version 6.3 v6
+push $cut_paste_input
+FrameHold {
+ first_frame {{"6 * (frame<=6) + frame * (frame>6)" i}}
+ name FrameHold4
+ selected true
+ xpos 106
+ ypos 103
+}

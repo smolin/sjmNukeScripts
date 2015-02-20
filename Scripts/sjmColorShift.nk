@@ -1,0 +1,13 @@
+set cut_paste_input [stack 0]
+version 6.1 v3
+push $cut_paste_input
+HueShift {
+ ingray {0.2319999933 0.1449999958 0.1080000028}
+ outgray {0.1099999994 0.0869999975 0.06400000304}
+ brightness 0.7
+ maskChannelInput rgba.alpha
+ name HueShift1
+ selected true
+ xpos 1659
+ ypos -751
+}
