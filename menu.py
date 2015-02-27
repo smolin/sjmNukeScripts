@@ -294,14 +294,17 @@ except:
 # NODE PARAMETER DEFAULTS
 # =======================================================================
 
-# set default values for various nodes (except Labels collected below)
+# set default values for various nodes (alpha sort except Labels collected below)
 #
-nuke.knobDefault('BackdropNode.note_font_size','120')
+nuke.knobDefault('BackdropNode.note_font_size','189')
+nuke.knobDefault("Blur.size", "11")
 nuke.knobDefault('DirBlurWrapper.BlurLayer','rgba')
+nuke.knobDefault('PostageStamp.hide_input','true')
 nuke.knobDefault('Roto.cliptype','none')
 nuke.knobDefault('Roto.premultiply','rgba')
-nuke.knobDefault("Blur.size", "1")
 nuke.knobDefault("RotoPaint.cliptype", "none")
+nuke.knobDefault('VectorBlur.uv','motion')
+nuke.knobDefault('VectorBlur.method','backward')
 
 nuke.knobDefault("Blur.label", "s:[value size]")
 nuke.knobDefault("FilterErode.label", "s:[value size]")
